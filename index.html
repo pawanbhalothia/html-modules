@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Added Meta Tag for IE Compatibility Mode -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>Title of the document</title>
+
+        <!-- Added Javascript file to IE Browser Support for html5 elements -->
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+
+        <style>
+            /*== PURE CSS BASED MENUES ==*/
+            nav {
+                border: 1px solid #999;
+                background: #CCC;
+            }
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+            nav ul li {
+                display: inline-block;
+                padding: 10px 10px 10px 5px;
+                position: relative;
+            }
+            nav ul li:after {
+                border-right: 1px solid #333;
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+            }
+            nav ul li:last-child:after {
+                border-right: 0;
+            }
+            nav ul li a{
+                text-decoration: none;
+                color: #333;
+                font-size: 14px;
+                font-family: verdana, sans-serif;
+                display: block;
+            }
+            nav ul li ul{
+                display: none;
+                text-align: left;
+                position: absolute;
+                left: -5px;
+                top: 38px;
+                background: #EEE;
+                min-width: 200px;
+                border: 1px solid #333;
+                border-top: none;
+            }
+            nav ul li ul li{
+                display: block;
+                margin: 0 10px;
+                border-bottom: 1px solid #777;
+            }
+            nav ul li ul li:last-child {
+                border-bottom: none;
+            }
+            nav ul li ul li:after {
+                border-right: none;
+            }
+            nav ul li:hover ul{
+                display: block;
+            }
+            nav ul li:hover ul li ul{
+                display: none;
+            }
+            nav ul li ul li ul{
+                display: none;
+            }
+            nav ul li ul li:hover ul{
+                display: block;
+                left: 99%;
+                top: 0;
+                border-top: 1px solid #333;
+            }
+
+            /*== CUSTOM SELECT BOX DROPDOWN ==*/
+            .select-dropdown {
+                border: 1px solid gray;
+                width: 250px;
+                overflow: hidden;
+                position: relative;
+                margin-top: 100px; /* we can change according to layout */
+            }
+            .select-dropdown:before {
+                content: "";
+                position: absolute;
+                right: 8px;
+                top: 40%;
+                border-top: 7px solid red;
+                border-right: 7px solid transparent;
+                border-bottom: 7px solid transparent;
+                border-left: 7px solid transparent;
+            }
+            .select-dropdown:after {
+                content: "";
+                position: absolute;
+                right: 8px;
+                top: 35%;
+                border-top: 7px solid white;
+                border-right: 7px solid transparent;
+                border-bottom: 7px solid transparent;
+                border-left: 7px solid transparent;
+            }
+            .select-dropdown select::-ms-expand {
+                display: none;
+            }
+            .select-dropdown select {
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+                text-indent: 1px;
+                text-overflow: '';
+                background: transparent;
+                position: relative;
+                z-index: 1;
+                width: 120%;
+                border: none;
+                padding: 10px 5px;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- PURE CSS BASED MENUES -->
+        <nav>
+            <ul>
+                <li><a href="#">Menu Item First</a></li>
+                <li><a href="#">Menu Item Second</a>
+                    <ul>
+                        <li><a href="#">Sub Menu Item First</a></li>
+                        <li><a href="#">Sub Menu Item Second</a></li>
+                        <li><a href="#">Sub Menu Item Third</a></li>
+                        <li><a href="#">Sub Menu Item Four</a></li>
+                        <li><a href="#">Sub Menu Item Five</a>
+                            <ul>
+                                <li><a href="#">Sub Menu Item First</a></li>
+                                <li><a href="#">Sub Menu Item Second</a></li>
+                                <li><a href="#">Sub Menu Item Third</a></li>
+                                <li><a href="#">Sub Menu Item Four</a></li>
+                                <li><a href="#">Sub Menu Item Five</a></li>
+                                <li><a href="#">Sub Menu Item Six</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Sub Menu Item Six</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu Item Third</a></li>
+                <li><a href="#">Menu Item Four</a>
+                    <ul>
+                        <li><a href="#">Sub Menu Item First</a></li>
+                        <li><a href="#">Sub Menu Item Second</a></li>
+                        <li><a href="#">Sub Menu Item Third</a></li>
+                        <li><a href="#">Sub Menu Item Four</a></li>
+                        <li><a href="#">Sub Menu Item Five</a></li>
+                        <li><a href="#">Sub Menu Item Six</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu Item Five</a></li>
+                <li><a href="#">Menu Item Six</a>
+                    <ul>
+                        <li><a href="#">Sub Menu Item First</a></li>
+                        <li><a href="#">Sub Menu Item Second</a></li>
+                        <li><a href="#">Sub Menu Item Third</a></li>
+                        <li><a href="#">Sub Menu Item Four</a></li>
+                        <li><a href="#">Sub Menu Item Five</a></li>
+                        <li><a href="#">Sub Menu Item Six</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu Item Seven</a></li>
+                <li><a href="#">Menu Item Eight</a>
+                    <ul>
+                        <li><a href="#">Sub Menu Item First</a></li>
+                        <li><a href="#">Sub Menu Item Second</a></li>
+                        <li><a href="#">Sub Menu Item Third</a></li>
+                        <li><a href="#">Sub Menu Item Four</a></li>
+                        <li><a href="#">Sub Menu Item Five</a></li>
+                        <li><a href="#">Sub Menu Item Six</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu Item Nine</a></li>
+                <li><a href="#">Menu Item Ten</a>
+                    <ul>
+                        <li><a href="#">Sub Menu Item First</a></li>
+                        <li><a href="#">Sub Menu Item Second</a></li>
+                        <li><a href="#">Sub Menu Item Third</a></li>
+                        <li><a href="#">Sub Menu Item Four</a></li>
+                        <li><a href="#">Sub Menu Item Five</a></li>
+                        <li><a href="#">Sub Menu Item Six</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- CUSTOM SELECT BOX DROPDOWN -->
+        <div class="select-dropdown">
+            <select>
+                <option>select dropdown one</option>
+                <option>select dropdown two</option>
+                <option>select dropdown three</option>
+                <option>select dropdown four</option>
+                <option>select dropdown five</option>
+                <option>select dropdown six</option>
+                <option>select dropdown seven</option>
+                <option>select dropdown eight</option>
+                <option>select dropdown nine</option>
+                <option>select dropdown ten</option>
+            </select>
+        </div>
+    </body>
+</html>
