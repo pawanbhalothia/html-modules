@@ -1,0 +1,45 @@
+/*== CUSTOM SELECT BOX DROPDOWN ==*/
+.select-dropdown {
+    border: 1px solid gray;
+    width: 250px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 100px; /* we can change according to layout */
+}
+.select-dropdown:before {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 40%;
+    border-top: 7px solid red;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid transparent;
+}
+.select-dropdown:after {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 35%;
+    border-top: 7px solid white;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid transparent;
+}
+.select-dropdown select::-ms-expand {
+    display: none;
+}
+.select-dropdown select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    width: 120%;
+    border: none;
+    padding: 10px 5px;
+    font-size: 14px;
+}

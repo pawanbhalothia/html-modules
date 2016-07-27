@@ -1,0 +1,73 @@
+/*== PURE CSS BASED MENUES ==*/
+nav {
+    border: 1px solid #999;
+    background: #CCC;
+    max-width: 960px;
+    margin: 0 auto;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+    padding: 10px 10px 10px 5px;
+    position: relative;
+}
+nav ul li:after {
+    border-right: 1px solid #333;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+nav ul li:last-child:after {
+    border-right: 0;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: verdana, sans-serif;
+    display: block;
+}
+nav ul li ul{
+    display: none;
+    text-align: left;
+    position: absolute;
+    left: -5px;
+    top: 38px;
+    background: #EEE;
+    min-width: 200px;
+    border: 1px solid #333;
+    border-top: none;
+}
+nav ul li ul li{
+    display: block;
+    margin: 0 10px;
+    border-bottom: 1px solid #777;
+}
+nav ul li ul li:last-child {
+    border-bottom: none;
+}
+nav ul li ul li:after {
+    border-right: none;
+}
+nav ul li:hover ul{
+    display: block;
+}
+nav ul li:hover ul li ul{
+    display: none;
+}
+nav ul li ul li ul{
+    display: none;
+}
+nav ul li ul li:hover ul{
+    display: block;
+    left: 99%;
+    top: 0;
+    border-top: 1px solid #333;
+}
