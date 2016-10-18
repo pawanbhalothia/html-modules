@@ -1,0 +1,34 @@
+/*== Multi-Line Padded Text Using CSS - Element / white-space Method ==*/
+/* Heading style */
+.multi-line-padded-text .title,
+.multi-line-padded-text .title:after{
+  background-color: #333;
+}
+.multi-line-padded-text .title {
+  position: relative;
+  line-height: 1;
+  color: #fff;
+  display: inline;
+  white-space: pre-wrap;
+  border: 0 solid #333;
+  border-width: 0.25em 0; /* 0.25em is roughly equal to one space character. */
+}
+.multi-line-padded-text .title:after {
+  content: "";
+  position: absolute;
+  top: -0.25em;
+  right: 100%;
+  bottom: -0.25em;
+  width: 0.25em;
+}
+.multi-line-padded-text .title > span {
+  position: relative;
+  z-index: 1;
+}
+
+.multi-line-padded-text .title.show {
+  outline: 3px solid red;
+}
+.multi-line-padded-text .title.show::after {
+  outline: 3px solid lightgreen;
+}
